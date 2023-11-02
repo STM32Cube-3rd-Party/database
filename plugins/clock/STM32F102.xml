@@ -519,6 +519,19 @@
         <Condition Diagnostic="" Expression="(STM32F103 )"/>
     </Label>
 
+    <!-- Air32F103 constraint-->
+    <Label id="Cst1" type="constraint" posX="1030" posY="427" text="128 MHz max">
+        <Condition Diagnostic="" Expression="(Air32F103 )"/>
+    </Label>
+	
+    <Label id="Cst2" type="constraint" posX="1030" posY="534" text="256 MHz max">
+        <Condition Diagnostic="" Expression="(Air32F103 )"/>
+    </Label>
+
+    <Label id="HCLKCLabel" type="constraint" posX="882" posY="440" text="256 MHz max">
+        <Condition Diagnostic="" Expression="(Air32F103 )"/>
+    </Label>
+
 
 	
     <Label id="HCLKLabel" type="info" posX="882" posY="400" text="HCLK (MHz)"/>
