@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<BindingsList xsi:noNamespaceSchemaLocation="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<!--TIM binding-->
+	<!--/////////////-->
+	<Binding Name="stm32-timers" Specifications="Documentation/bindings/mfd/stm32-timers.txt" >
+
+		<Node>
+			<Node Condition="Semaphore_PWM_Generation_Output$IpInstance" Label="" Name="pwm" UnitAddress="">
+				<PinCtrl NodeNameMatcher="tim.+_pwm.*"/>
+			</Node>
+					
+			<Node  Condition="Semaphore_Encoder_Interface$IpInstance" Label="" Name = "timer" UnitAddress="">
+				<PinCtrl NodeNameMatcher="tim.+_timer.*"/>
+			</Node>
+			
+		</Node>
+		
+	</Binding>
+
+</BindingsList>

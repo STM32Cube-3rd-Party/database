@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<BindingsList xsi:noNamespaceSchemaLocation="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<!--SAI binding-->
+	<!--/////////////-->
+	<Binding Name="st-stm32-sai" Specifications="Documentation/bindings/sound/st,stm32-sai.txt" >
+
+		<Node>
+			<Node Condition="$IpInstance_SAIA_Mode" Label="" Name="saia" UnitAddress=""/>
+			<Node  Condition="$IpInstance_SAIB_Mode" Label="" Name = "saib" UnitAddress=""/>
+		</Node>
+		
+	</Binding>
+
+</BindingsList>
+

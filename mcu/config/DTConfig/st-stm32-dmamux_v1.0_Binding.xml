@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<BindingsList xsi:noNamespaceSchemaLocation="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<!--stm32-dmamux device binding-->
+	<!--//////////////////-->
+	
+	<Binding Name="dmamux" Specifications="Documentation/bindings/dma/stm32-dmamux.txt" >
+		<Node>
+			<Include Path="" Segment="st-stm32-dmamux_v1.0_Binding.ftl/bind_dmamux" />
+		</Node>
+	</Binding>
+
+</BindingsList>

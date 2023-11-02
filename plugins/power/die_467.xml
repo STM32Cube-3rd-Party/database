@@ -1,0 +1,902 @@
+<Die xsi:noNamespaceSchemaLocation="../../../../../../../doc/V4/Development/Specifications/db/plugins/power/die.xsd" Number="467" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Datasheets>
+    <Datasheet Ref="Yes" DocId="034865" Rev="0" InternetId="DM00748675" DS="13560"> <!-- G0B1x -->
+    </Datasheet>
+    <Datasheet DocId="034871" Rev="0" InternetId="DM00748970" DS="13565"> <!-- G0B0x -->
+    </Datasheet>
+    <Datasheet DocId="034870" Rev="0" InternetId="DM00748830" DS="13564"> <!-- G0Cx -->
+    </Datasheet>
+  </Datasheets> 
+  <MaxCurrent Value="100000000"/>
+  <TJMax Value="130"/> <!-- Suffix 3 -->
+  <Packages> <!-- Update done acording to DS12992: TBConfirmed with G0Bx/G0Cx DS -->
+    <Package Names="LQFP64" ThermalResistance="84"/> <!-- value to check ! -->
+    <Package Names="LQFP48" ThermalResistance="84"/>
+    <Package Names="UFQFPN48" ThermalResistance="31"/>
+    <Package Names="LQFP32" ThermalResistance="84"/>
+    <Package Names="UFQFPN32" ThermalResistance="47"/>
+    <Package Names="UFQFPN28" ThermalResistance="89"/>
+    <Package Names="TSSOP20" ThermalResistance="88"/>
+    <Package Names="SO8N" ThermalResistance="134"/>
+  </Packages>
+  <DMIPS FlashValueByMHz="1.25" RamValueByMhz="1.25"/>
+  <Peripherals>
+  <Peripheral Name="Bus_Matrix" ImpactPinout="YES:Bus_Matrix" Type="Digital" Prescaler="AHB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="500"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="500"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="500"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="RTC" ImpactPinout="YES:RTC" Type="Digital" Prescaler="AHB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP,LOWPOWER_RUN,LOWPOWER_SLEEP,STANDBY,SHUTDOWN,STOP0,STOP1,VBAT">
+        <Consumption ConsumptionByMHz="0"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="IWDG" ImpactPinout="YES:IWDG" Type="Digital" Prescaler="AHB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="2"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="2"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="2"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="IOPORT Bus" ImpactPinout="YES:IOPORT Bus" Type="Digital" Prescaler="IOPORT">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="500"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="400"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="300"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="GPIOA" ImpactPinout="YES:GPIOA" Type="Digital" Prescaler="IOPORT">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="3100"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="2400"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="3000"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="GPIOB" ImpactPinout="YES:GPIOB" Type="Digital" Prescaler="IOPORT">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="2900"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="2300"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="3000"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="GPIOC" ImpactPinout="YES:GPIOC" Type="Digital" Prescaler="IOPORT">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="3000"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="2400"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="2800"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="GPIOD" ImpactPinout="YES:GPIOD" Type="Digital" Prescaler="IOPORT">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="2700"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="2200"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="2450"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+    <Peripheral Name="GPIOE" ImpactPinout="YES:GPIOE" Type="Digital" Prescaler="IOPORT">
+      <PeripheralConsumption Vdd="3.0" Temperature="25">
+        <PowerModes PowerModesList="RUN,SLEEP">
+          <Consumption Range="Range1-High" ConsumptionByMHz="1600"/>
+          <Consumption Range="Range2-Medium" ConsumptionByMHz="1400"/>
+        </PowerModes>
+        <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+          <Consumption ConsumptionByMHz="1600"/>
+        </PowerModes>
+      </PeripheralConsumption>
+    </Peripheral>
+  <Peripheral Name="GPIOF" ImpactPinout="YES:GPIOF" Type="Digital" Prescaler="IOPORT">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="2800"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="2300"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="2600"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="DMA1/DMAMUX" ImpactPinout="YES:DMA1/DMAMUX" Type="Digital" Prescaler="AHB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="5100"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="4300"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="4900"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="DMA2" ImpactPinout="YES:DMA2" Type="Digital" Prescaler="AHB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="1500"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="1300"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="1500"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="CRC" ImpactPinout="YES:CRC" Type="Digital" Prescaler="AHB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="400"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="400"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="500"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="FLASH" ImpactPinout="YES:FLASH" Type="Digital" Prescaler="AHB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="22000"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="18000"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="21000"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="RNG" ImpactPinout="YES:RNG" Type="Digital" Prescaler="AHB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="1500"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="1300"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="1500"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="AES" ImpactPinout="YES:AES" Type="Digital" Prescaler="AHB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="2700"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="2300"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="2500"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="AHB_to_APB_Bridge" ImpactPinout="YES:AHB_to_APB_Bridge" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="200"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="200"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="100"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="TIM2" ImpactPinout="YES:TIM2" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="5200"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="4300"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="4900"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="TIM3" ImpactPinout="YES:TIM3" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="4700"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="3900"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="4300"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="TIM4" ImpactPinout="YES:TIM4" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="4400"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="3700"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="4200"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="TIM6" ImpactPinout="YES:TIM6" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="1200"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="1000"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="1100"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="TIM7" ImpactPinout="YES:TIM7" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="800"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="700"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="800"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="I2C1" ImpactPinout="YES:I2C1" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="3600"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="3000"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="3300"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="I2C2" ImpactPinout="YES:I2C2" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="3400"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="2800"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="3200"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="I2C3" ImpactPinout="YES:I2C3" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="900"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="700"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="800"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="SPI2" ImpactPinout="YES:SPI2" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="2100"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="1700"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="2000"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="SPI3" ImpactPinout="YES:SPI3" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="1400"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="1200"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="1300"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="USART2" ImpactPinout="YES:USART2" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="7400"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="6200"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="7000"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="USART3" ImpactPinout="YES:USART3" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="7400"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="6200"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="6900"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="USART4" ImpactPinout="YES:USART4" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="2100"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="1800"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="2000"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="USART5" ImpactPinout="YES:USART5" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="2300"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="1900"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="2100"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="USART6" ImpactPinout="YES:USART6" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="2200"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="1800"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="2100"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+   <Peripheral Name="UCPD1" ImpactPinout="YES:UCPD1" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="4000"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="7900"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="59000"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+    <Peripheral Name="UCPD2" ImpactPinout="YES:UCPD2" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="4000"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="7900"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="59500"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="LPTIM1" ImpactPinout="YES:LPTIM1" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="3300"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="2700"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="3100"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="LPUART1" ImpactPinout="YES:LPUART1" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="4500"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="3700"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="4000"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+    <Peripheral Name="LPUART2" ImpactPinout="YES:LPUART2" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="4900"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="4100"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="4600"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="DBG" ImpactPinout="YES:DBG" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="19"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="11"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="440"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="PWR" ImpactPinout="YES:PWR" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="400"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="300"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="400"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="SYSCFG/VREFBUF/COMP1" ImpactPinout="YES:SYSCFG/VREFBUF/COMP1" Type="Analog" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="21000"/> <!-- 5000 + 16000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="400" GlobalConsumption="21000"/> <!-- 5000 + 16000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="23000"/> <!-- 5000 + 18000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="400" GlobalConsumption="23000"/> <!-- 5000 + 18000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="40000"/> <!-- 5000 + 35000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="400" GlobalConsumption="40000"/> <!-- 5000 + 35000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="22000"/> <!-- 6000 + 16000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="400" GlobalConsumption="22000"/> <!-- 6000 + 16000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="24000"/> <!-- 6000 + 18000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="400" GlobalConsumption="24000"/> <!-- 6000 + 18000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="41000"/> <!-- 6000 + 35000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="400" GlobalConsumption="41000"/> <!-- 6000 + 35000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="23000"/> <!-- 7000 + 16000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="400" GlobalConsumption="23000"/> <!-- 7000 + 16000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="25000"/> <!-- 7000 + 18000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="400" GlobalConsumption="25000"/> <!-- 7000 + 18000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="42000"/> <!-- 7000 + 35000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="400" GlobalConsumption="42000"/> <!-- 7000 + 35000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="24000"/> <!-- 8000 + 16000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="400" GlobalConsumption="24000"/> <!-- 8000 + 16000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="24000"/> <!-- 8000 + 18000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="400" GlobalConsumption="26000"/> <!-- 8000 + 18000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="43000"/> <!-- 8000 + 35000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="400" GlobalConsumption="43000"/> <!-- 8000 + 35000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="266000"/> <!-- 250000 + 16000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="400" GlobalConsumption="266000"/> <!-- 250000 + 16000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="268000"/> <!-- 250000 + 18000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="400" GlobalConsumption="268000"/> <!-- 250000 + 18000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="285000"/> <!-- 250000 + 35000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="400" GlobalConsumption="285000"/> <!-- 250000 + 35000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="5000"/> <!-- 5000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="6000"/> <!-- 6000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="7000"/> <!-- 7000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="8000"/> <!-- 8000 -->
+        <Consumption Range="Range1-High" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="250000"/> <!-- 250000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_OFF" ConsumptionByMHz="400" GlobalConsumption="5000"/> <!-- 5000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="400" GlobalConsumption="6000"/> <!-- 6000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_OFF" ConsumptionByMHz="400" GlobalConsumption="7000"/> <!-- 7000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="400" GlobalConsumption="8000"/> <!-- 8000 -->
+        <Consumption Range="Range2-Medium" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_OFF" ConsumptionByMHz="400" GlobalConsumption="250000"/> <!-- 250000 -->
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="21000"/> <!-- 5000 + 16000 -->
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="23000"/> <!-- 5000 + 18000 -->
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="40000"/> <!-- 5000 + 35000 -->
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="22000"/> <!-- 6000 + 16000 -->
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="24000"/> <!-- 6000 + 18000 -->
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="41000"/> <!-- 6000 + 35000 -->
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="23000"/> <!-- 7000 + 16000 -->
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="25000"/> <!-- 7000 + 18000 -->
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="42000"/> <!-- 7000 + 35000 -->
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="24000"/> <!-- 8000 + 16000 -->
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="26000"/> <!-- 8000 + 18000 -->
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="43000"/> <!-- 8000 + 35000 -->
+        <Consumption PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="266000"/> <!-- 250000 + 16000 -->
+        <Consumption PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="268000"/> <!-- 250000 + 18000 -->
+        <Consumption PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="285000"/> <!-- 250000 + 35000 -->
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="5000"/> <!-- 5000 -->
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="6000"/> <!-- 6000 -->
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="7000"/> <!-- 7000 -->
+        <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="8000"/> <!-- 8000 -->
+        <Consumption PeripheralMode="COMP_High_Speed_Mode-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="250000"/> <!-- 250000 -->
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+    <Peripheral Name="SYSCFG/VREFBUF/COMP2" ImpactPinout="YES:SYSCFG/VREFBUF/COMP2" Type="Analog" Prescaler="APB">
+      <PeripheralConsumption Vdd="3.0" Temperature="25">
+        <PowerModes PowerModesList="RUN,SLEEP">
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="21000"/> <!-- 5000 + 16000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="400" GlobalConsumption="21000"/> <!-- 5000 + 16000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="23000"/> <!-- 5000 + 18000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="400" GlobalConsumption="23000"/> <!-- 5000 + 18000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="40000"/> <!-- 5000 + 35000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="400" GlobalConsumption="40000"/> <!-- 5000 + 35000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="22000"/> <!-- 6000 + 16000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="400" GlobalConsumption="22000"/> <!-- 6000 + 16000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="24000"/> <!-- 6000 + 18000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="400" GlobalConsumption="24000"/> <!-- 6000 + 18000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="41000"/> <!-- 6000 + 35000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="400" GlobalConsumption="41000"/> <!-- 6000 + 35000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="23000"/> <!-- 7000 + 16000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="400" GlobalConsumption="23000"/> <!-- 7000 + 16000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="25000"/> <!-- 7000 + 18000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="400" GlobalConsumption="25000"/> <!-- 7000 + 18000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="42000"/> <!-- 7000 + 35000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="400" GlobalConsumption="42000"/> <!-- 7000 + 35000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="24000"/> <!-- 8000 + 16000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="400" GlobalConsumption="24000"/> <!-- 8000 + 16000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="24000"/> <!-- 8000 + 18000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="400" GlobalConsumption="26000"/> <!-- 8000 + 18000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="43000"/> <!-- 8000 + 35000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="400" GlobalConsumption="43000"/> <!-- 8000 + 35000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="266000"/> <!-- 250000 + 16000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="400" GlobalConsumption="266000"/> <!-- 250000 + 16000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="268000"/> <!-- 250000 + 18000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="400" GlobalConsumption="268000"/> <!-- 250000 + 18000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="285000"/> <!-- 250000 + 35000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="400" GlobalConsumption="285000"/> <!-- 250000 + 35000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="5000"/> <!-- 5000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="6000"/> <!-- 6000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="7000"/> <!-- 7000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="8000"/> <!-- 8000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="250000"/> <!-- 250000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_OFF" ConsumptionByMHz="400" GlobalConsumption="5000"/> <!-- 5000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="400" GlobalConsumption="6000"/> <!-- 6000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_OFF" ConsumptionByMHz="400" GlobalConsumption="7000"/> <!-- 7000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="400" GlobalConsumption="8000"/> <!-- 8000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_OFF" ConsumptionByMHz="400" GlobalConsumption="250000"/> <!-- 250000 -->
+        </PowerModes>
+        <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="21000"/> <!-- 5000 + 16000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="23000"/> <!-- 5000 + 18000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="40000"/> <!-- 5000 + 35000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="22000"/> <!-- 6000 + 16000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="24000"/> <!-- 6000 + 18000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="41000"/> <!-- 6000 + 35000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="23000"/> <!-- 7000 + 16000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="25000"/> <!-- 7000 + 18000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="42000"/> <!-- 7000 + 35000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="24000"/> <!-- 8000 + 16000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="26000"/> <!-- 8000 + 18000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="43000"/> <!-- 8000 + 35000 -->
+          <Consumption PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="266000"/> <!-- 250000 + 16000 -->
+          <Consumption PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="268000"/> <!-- 250000 + 18000 -->
+          <Consumption PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="285000"/> <!-- 250000 + 35000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="5000"/> <!-- 5000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="6000"/> <!-- 6000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="7000"/> <!-- 7000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="8000"/> <!-- 8000 -->
+          <Consumption PeripheralMode="COMP_High_Speed_Mode-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="250000"/> <!-- 250000 -->
+        </PowerModes>
+      </PeripheralConsumption>
+    </Peripheral>
+    <Peripheral Name="SYSCFG/VREFBUF/COMP3" ImpactPinout="YES:SYSCFG/VREFBUF/COMP3" Type="Analog" Prescaler="APB">
+      <PeripheralConsumption Vdd="3.0" Temperature="25">
+        <PowerModes PowerModesList="RUN,SLEEP">
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="21000"/> <!-- 5000 + 16000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="400" GlobalConsumption="21000"/> <!-- 5000 + 16000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="23000"/> <!-- 5000 + 18000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="400" GlobalConsumption="23000"/> <!-- 5000 + 18000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="40000"/> <!-- 5000 + 35000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="400" GlobalConsumption="40000"/> <!-- 5000 + 35000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="22000"/> <!-- 6000 + 16000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="400" GlobalConsumption="22000"/> <!-- 6000 + 16000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="24000"/> <!-- 6000 + 18000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="400" GlobalConsumption="24000"/> <!-- 6000 + 18000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="41000"/> <!-- 6000 + 35000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="400" GlobalConsumption="41000"/> <!-- 6000 + 35000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="23000"/> <!-- 7000 + 16000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="400" GlobalConsumption="23000"/> <!-- 7000 + 16000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="25000"/> <!-- 7000 + 18000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="400" GlobalConsumption="25000"/> <!-- 7000 + 18000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="42000"/> <!-- 7000 + 35000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="400" GlobalConsumption="42000"/> <!-- 7000 + 35000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="24000"/> <!-- 8000 + 16000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="400" GlobalConsumption="24000"/> <!-- 8000 + 16000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="24000"/> <!-- 8000 + 18000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="400" GlobalConsumption="26000"/> <!-- 8000 + 18000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="43000"/> <!-- 8000 + 35000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="400" GlobalConsumption="43000"/> <!-- 8000 + 35000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="266000"/> <!-- 250000 + 16000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="400" GlobalConsumption="266000"/> <!-- 250000 + 16000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="268000"/> <!-- 250000 + 18000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="400" GlobalConsumption="268000"/> <!-- 250000 + 18000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="285000"/> <!-- 250000 + 35000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="400" GlobalConsumption="285000"/> <!-- 250000 + 35000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="5000"/> <!-- 5000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="6000"/> <!-- 6000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="7000"/> <!-- 7000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="8000"/> <!-- 8000 -->
+          <Consumption Range="Range1-High" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="250000"/> <!-- 250000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_OFF" ConsumptionByMHz="400" GlobalConsumption="5000"/> <!-- 5000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="400" GlobalConsumption="6000"/> <!-- 6000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_OFF" ConsumptionByMHz="400" GlobalConsumption="7000"/> <!-- 7000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="400" GlobalConsumption="8000"/> <!-- 8000 -->
+          <Consumption Range="Range2-Medium" PeripheralMode="COMP_High_Speed_Mode-VREFBUF_OFF" ConsumptionByMHz="400" GlobalConsumption="250000"/> <!-- 250000 -->
+        </PowerModes>
+        <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="21000"/> <!-- 5000 + 16000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="23000"/> <!-- 5000 + 18000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="40000"/> <!-- 5000 + 35000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="22000"/> <!-- 6000 + 16000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="24000"/> <!-- 6000 + 18000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="41000"/> <!-- 6000 + 35000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="23000"/> <!-- 7000 + 16000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="25000"/> <!-- 7000 + 18000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="42000"/> <!-- 7000 + 35000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="24000"/> <!-- 8000 + 16000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="26000"/> <!-- 8000 + 18000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="43000"/> <!-- 8000 + 35000 -->
+          <Consumption PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-0uA" ConsumptionByMHz="500" GlobalConsumption="266000"/> <!-- 250000 + 16000 -->
+          <Consumption PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-500uA" ConsumptionByMHz="500" GlobalConsumption="268000"/> <!-- 250000 + 18000 -->
+          <Consumption PeripheralMode="COMP_High_Speed_Mode-VREFBUF_ON_Iload-4mA" ConsumptionByMHz="500" GlobalConsumption="285000"/> <!-- 250000 + 35000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-Static-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="5000"/> <!-- 5000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="6000"/> <!-- 6000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-Static-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="7000"/> <!-- 7000 -->
+          <Consumption PeripheralMode="COMP_Medium_Speed_Mode_With_Deglitcher-50kHz_Square_Signal-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="8000"/> <!-- 8000 -->
+          <Consumption PeripheralMode="COMP_High_Speed_Mode-VREFBUF_OFF" ConsumptionByMHz="500" GlobalConsumption="250000"/> <!-- 250000 -->
+        </PowerModes>
+      </PeripheralConsumption>
+    </Peripheral>
+  <Peripheral Name="TIM14" ImpactPinout="YES:TIM14" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="1400"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="1200"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="1300"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="TIM15" ImpactPinout="YES:TIM15" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="4200"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="3500"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="3900"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="ADC1" ImpactPinout="YES:ADC1" Type="Analog" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" PeripheralMode="fs_2.5_Msps" ConsumptionByMHz="2400" GlobalConsumption="410000"/>
+        <Consumption Range="Range1-High" PeripheralMode="fs_1_Msps" ConsumptionByMHz="2400" GlobalConsumption="164000"/>
+        <Consumption Range="Range1-High" PeripheralMode="fs_10_kSps" ConsumptionByMHz="2400" GlobalConsumption="17000"/>
+        <Consumption Range="Range2-Medium" PeripheralMode="fs_2.5_Msps" ConsumptionByMHz="2000" GlobalConsumption="410000"/>
+        <Consumption Range="Range2-Medium" PeripheralMode="fs_1_Msps" ConsumptionByMHz="2000" GlobalConsumption="164000"/>
+        <Consumption Range="Range2-Medium" PeripheralMode="fs_10_kSps" ConsumptionByMHz="2000" GlobalConsumption="17000"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption PeripheralMode="fs_2.5_Msps" ConsumptionByMHz="2300" GlobalConsumption="410000"/>
+        <Consumption PeripheralMode="fs_1_Msps" ConsumptionByMHz="2300" GlobalConsumption="164000"/>
+        <Consumption PeripheralMode="fs_10_kSps" ConsumptionByMHz="2300" GlobalConsumption="17000"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="DAC1" ImpactPinout="YES:DAC1" Type="Analog" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" PeripheralMode="OUT1-Buffer_ON-Middle_code" ConsumptionByMHz="1900" GlobalConsumption="315000"/>
+        <Consumption Range="Range1-High" PeripheralMode="OUT2-Buffer_ON-Middle_code" ConsumptionByMHz="1900" GlobalConsumption="315000"/>
+        <Consumption Range="Range1-High" PeripheralMode="OUT1+OUT2-Buffer_ON-Middle_code" ConsumptionByMHz="1900" GlobalConsumption="630000"/>
+        <Consumption Range="Range1-High" PeripheralMode="OUT1-Buffer_ON-Worst_code" ConsumptionByMHz="1900" GlobalConsumption="450000"/>
+        <Consumption Range="Range1-High" PeripheralMode="OUT2-Buffer_ON-Worst_code" ConsumptionByMHz="1900" GlobalConsumption="450000"/>
+        <Consumption Range="Range1-High" PeripheralMode="OUT1+OUT2-Buffer_ON-Worst_code" ConsumptionByMHz="1900" GlobalConsumption="900000"/>
+        <Consumption Range="Range1-High" PeripheralMode="OUT1-Buffer_OFF-Middle_code" ConsumptionByMHz="1900" GlobalConsumption="200"/> <!-- Max value since Typ value not available -->
+        <Consumption Range="Range1-High" PeripheralMode="OUT2-Buffer_OFF-Middle_code" ConsumptionByMHz="1900" GlobalConsumption="200"/>
+        <Consumption Range="Range1-High" PeripheralMode="OUT1+OUT2-Buffer_OFF-Middle_code" ConsumptionByMHz="1900" GlobalConsumption="400"/>
+        <Consumption Range="Range2-Medium" PeripheralMode="OUT1-Buffer_ON-Middle_code" ConsumptionByMHz="1600" GlobalConsumption="315000"/>
+        <Consumption Range="Range2-Medium" PeripheralMode="OUT2-Buffer_ON-Middle_code" ConsumptionByMHz="1600" GlobalConsumption="315000"/>
+        <Consumption Range="Range2-Medium" PeripheralMode="OUT1+OUT2-Buffer_ON-Middle_code" ConsumptionByMHz="1600" GlobalConsumption="630000"/>
+        <Consumption Range="Range2-Medium" PeripheralMode="OUT1-Buffer_ON-Worst_code" ConsumptionByMHz="1600" GlobalConsumption="450000"/>
+        <Consumption Range="Range2-Medium" PeripheralMode="OUT2-Buffer_ON-Worst_code" ConsumptionByMHz="1600" GlobalConsumption="450000"/>
+        <Consumption Range="Range2-Medium" PeripheralMode="OUT1+OUT2-Buffer_ON-Worst_code" ConsumptionByMHz="1600" GlobalConsumption="900000"/>
+        <Consumption Range="Range2-Medium" PeripheralMode="OUT1-Buffer_OFF-Middle_code" ConsumptionByMHz="1600" GlobalConsumption="200"/> <!-- Max value since Typ value not available -->
+        <Consumption Range="Range2-Medium" PeripheralMode="OUT2-Buffer_OFF-Middle_code" ConsumptionByMHz="1600" GlobalConsumption="200"/>
+        <Consumption Range="Range2-Medium" PeripheralMode="OUT1+OUT2-Buffer_OFF-Middle_code" ConsumptionByMHz="1600" GlobalConsumption="400"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption PeripheralMode="OUT1-Buffer_ON-Middle_code" ConsumptionByMHz="1800" GlobalConsumption="315000"/>
+        <Consumption PeripheralMode="OUT2-Buffer_ON-Middle_code" ConsumptionByMHz="1800" GlobalConsumption="315000"/>
+        <Consumption PeripheralMode="OUT1+OUT2-Buffer_ON-Middle_code" ConsumptionByMHz="1800" GlobalConsumption="630000"/>
+        <Consumption PeripheralMode="OUT1-Buffer_ON-Worst_code" ConsumptionByMHz="1800" GlobalConsumption="450000"/>
+        <Consumption PeripheralMode="OUT2-Buffer_ON-Worst_code" ConsumptionByMHz="1800" GlobalConsumption="450000"/>
+        <Consumption PeripheralMode="OUT1+OUT2-Buffer_ON-Worst_code" ConsumptionByMHz="1800" GlobalConsumption="900000"/>
+        <Consumption PeripheralMode="OUT1-Buffer_OFF-Middle_code" ConsumptionByMHz="1800" GlobalConsumption="200"/> <!-- Max value since Typ value not available -->
+        <Consumption PeripheralMode="OUT2-Buffer_OFF-Middle_code" ConsumptionByMHz="1800" GlobalConsumption="200"/>
+        <Consumption PeripheralMode="OUT1+OUT2-Buffer_OFF-Middle_code" ConsumptionByMHz="1800" GlobalConsumption="400"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="LPTIM2" ImpactPinout="YES:LPTIM2" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="3200"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="2700"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="3100"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+    <Peripheral Name="FDCAN1" ImpactPinout="YES:FDCAN1" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="16000"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="13000"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="15000"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="FDCAN2" ImpactPinout="YES:FDCAN2" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="16000"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="13000"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="15000"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="WWDG" ImpactPinout="YES:WWDG" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="400"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="400"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="400"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="TIM17" ImpactPinout="YES:TIM17" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="800"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="700"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="700"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="TIM1" ImpactPinout="YES:TIM1" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="7600"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="6300"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="7200"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="TIM16" ImpactPinout="YES:TIM16" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="2700"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="2300"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="2500"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="USART1" ImpactPinout="YES:USART1" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="7400"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="6200"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="6900"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="SPI1" ImpactPinout="YES:SPI1" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="2200"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="1900"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="2100"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="USB_DRD_FS" ImpactPinout="YES:USB_DRD_FS" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="3300"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="2700"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="3000"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="HDMI_CEC" ImpactPinout="YES:HDMI_CEC" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="400"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="300"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="300"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>
+  <Peripheral Name="CRS" ImpactPinout="YES:CRS" Type="Digital" Prescaler="APB">
+    <PeripheralConsumption Vdd="3.0" Temperature="25">
+      <PowerModes PowerModesList="RUN,SLEEP">
+        <Consumption Range="Range1-High" ConsumptionByMHz="200"/>
+        <Consumption Range="Range2-Medium" ConsumptionByMHz="200"/>
+      </PowerModes>
+      <PowerModes PowerModesList="LOWPOWER_RUN,LOWPOWER_SLEEP">
+        <Consumption ConsumptionByMHz="300"/>
+      </PowerModes>
+    </PeripheralConsumption>
+  </Peripheral>    
+  </Peripherals>
+  <PeripheralsLists>
+    <PowerMode Name="RUN">
+      <Filter IpsFromList="All"/>
+    </PowerMode>
+    <PowerMode Name="SLEEP">
+      <Filter IpsFromList="All"/>
+    </PowerMode>
+    <PowerMode Name="LOWPOWER_RUN">
+      <Filter IpsFromList="All"/>
+    </PowerMode>
+    <PowerMode Name="LOWPOWER_SLEEP">
+      <Filter IpsFromList="All"/>
+    </PowerMode>
+    <PowerMode Name="STOP0">
+      <Filter IpsFromList="Include"/>
+      <Peripheral Name="LPTIM1"/>
+      <Peripheral Name="LPTIM2"/>
+      <Peripheral Name="RTC"/>
+      <Peripheral Name="IWDG"/>
+    </PowerMode>
+    <PowerMode Name="STOP1">
+      <Filter IpsFromList="Include"/>
+      <Peripheral Name="LPTIM1"/>
+      <Peripheral Name="LPTIM2"/>
+      <Peripheral Name="RTC"/>
+      <Peripheral Name="IWDG"/>
+    </PowerMode>
+    <PowerMode Name="STANDBY">
+      <Filter IpsFromList="Include"/>
+      <Peripheral Name="SRAM_Retention"/>
+      <Peripheral Name="RTC"/>
+      <Peripheral Name="IWDG"/>
+    </PowerMode>
+    <PowerMode Name="SHUTDOWN">
+      <Filter IpsFromList="Include"/>
+      <Peripheral Name="RTC"/>
+    </PowerMode>
+    <PowerMode Name="VBAT">
+      <Filter IpsFromList="Include"/>
+      <Peripheral Name="RTC"/>
+    </PowerMode>
+  </PeripheralsLists>
+</Die>
